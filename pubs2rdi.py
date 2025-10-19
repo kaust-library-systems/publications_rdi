@@ -20,11 +20,27 @@ def _(mo):
 @app.cell
 def _():
     import marimo as mo
+    import duckdb as ddb
+    import polars as pl
+    import sqlglot
+    import os
+
+    from dotenv import load_dotenv
     return (mo,)
 
 
 @app.cell
 def _():
+    return
+
+
+@app.cell
+def _(mo):
+    _df = mo.sql(
+        f"""
+        SELECT * FROM
+        """
+    )
     return
 
 
